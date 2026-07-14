@@ -1,0 +1,1796 @@
+/* =====================================
+   ANNIVERSARY WEBSITE
+   LUXURY BLACK & GOLD THEME
+   STYLE CSS - PART 1
+===================================== */
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap');
+
+
+/* =====================================
+   ROOT VARIABLES
+===================================== */
+
+:root {
+    --black: #050505;
+    --dark: #0b0b0b;
+    --gold: #d4af37;
+    --light-gold: #f7e7a9;
+    --white: #ffffff;
+    --gray: #b5b5b5;
+    --glass: rgba(255,255,255,0.08);
+    --border: rgba(212,175,55,0.35);
+
+    --title-font: 'Cinzel', serif;
+    --body-font: 'Poppins', sans-serif;
+    --script-font: 'Great Vibes', cursive;
+}
+
+
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--body-font);
+    overflow-x: hidden;
+}
+
+
+/* Remove default styles */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   GLOBAL CONTAINER
+===================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================
+   BACKGROUND EFFECT
+===================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(212,175,55,0.15),
+    transparent 35%);
+
+    z-index: -2;
+
+}
+
+
+/* Golden Glow */
+
+.gold-glow {
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: var(--gold);
+
+    filter: blur(150px);
+
+    opacity: 0.15;
+
+    border-radius: 50%;
+
+}
+
+
+/* =====================================
+   TYPOGRAPHY
+===================================== */
+
+
+h1,
+h2,
+h3 {
+
+    font-family: var(--title-font);
+
+    letter-spacing: 2px;
+
+}
+
+
+.script-text {
+
+    font-family: var(--script-font);
+
+    color: var(--gold);
+
+}
+
+
+.gold-text {
+
+    color: var(--gold);
+
+}
+
+
+.subtitle {
+
+    color: var(--gray);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================
+   GLASS CARD
+===================================== */
+
+
+.glass-card {
+
+    background:
+
+    rgba(255,255,255,0.06);
+
+
+    backdrop-filter: blur(15px);
+
+
+    -webkit-backdrop-filter: blur(15px);
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    border-radius: 20px;
+
+
+    padding: 30px;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,0.5);
+
+
+}
+
+
+/* =====================================
+   BUTTON DESIGN
+===================================== */
+
+
+.luxury-btn {
+
+
+    display: inline-flex;
+
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    padding: 14px 35px;
+
+
+    border-radius: 50px;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #d4af37,
+    #f7e7a9
+    );
+
+
+    color: #000;
+
+
+    font-weight: 600;
+
+
+    letter-spacing: 1px;
+
+
+    transition: 0.4s ease;
+
+
+    border: none;
+
+
+}
+
+
+.luxury-btn:hover {
+
+
+    transform: translateY(-5px);
+
+
+    box-shadow:
+
+    0 15px 30px rgba(212,175,55,0.4);
+
+
+}
+
+
+
+/* =====================================
+   CHERRY BLOSSOM PARTICLE AREA
+===================================== */
+
+
+.cherry {
+
+    position: absolute;
+
+    color: pink;
+
+    font-size: 25px;
+
+    animation:
+
+    fall 10s linear infinite;
+
+}
+
+
+
+@keyframes fall {
+
+
+    0% {
+
+        transform:
+
+        translateY(-100px)
+
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+
+    20% {
+
+        opacity:1;
+
+    }
+
+
+    100% {
+
+
+        transform:
+
+        translateY(100vh)
+
+        rotate(360deg);
+
+
+        opacity:0;
+
+
+    }
+
+}
+
+
+
+/* =====================================
+   SECTION COMMON STYLE
+===================================== */
+
+
+section {
+
+
+    position: relative;
+
+    padding: 100px 0;
+
+
+}
+
+
+.section-title {
+
+
+    text-align:center;
+
+
+    margin-bottom:60px;
+
+
+}
+
+
+.section-title h2 {
+
+
+    font-size:45px;
+
+
+    color:var(--gold);
+
+
+}
+
+
+.section-title p {
+
+
+    margin-top:15px;
+
+
+    color:var(--gray);
+
+
+}
+
+
+
+/* =====================================
+   ANIMATION CLASSES
+===================================== */
+
+
+.fade-up {
+
+
+    animation:
+
+    fadeUp 1s ease forwards;
+
+
+}
+
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:
+
+        translateY(50px);
+
+
+    }
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:
+
+        translateY(0);
+
+
+    }
+
+}
+/* =====================================
+   STYLE CSS - PART 2
+   NAVBAR + CINEMATIC HERO SECTION
+===================================== */
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 0;
+
+    z-index: 1000;
+
+    transition: 0.4s ease;
+
+}
+
+
+.navbar.scrolled {
+
+    background:
+
+    rgba(5,5,5,0.85);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+
+    1px solid var(--border);
+
+    padding: 15px 0;
+
+}
+
+
+
+.nav-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+
+.logo {
+
+
+    font-family: var(--script-font);
+
+    font-size:40px;
+
+    color:var(--gold);
+
+
+}
+
+
+
+.nav-links {
+
+
+    display:flex;
+
+    gap:35px;
+
+
+}
+
+
+
+.nav-links a {
+
+
+    font-size:15px;
+
+    color:white;
+
+    letter-spacing:1px;
+
+    transition:0.3s;
+
+
+}
+
+
+
+.nav-links a:hover {
+
+
+    color:var(--gold);
+
+
+}
+
+
+
+/* Mobile Menu */
+
+.menu-btn {
+
+
+    display:none;
+
+    font-size:30px;
+
+    color:var(--gold);
+
+
+}
+
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+
+.hero {
+
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.hero::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+    linear-gradient(
+
+    rgba(0,0,0,0.55),
+
+    rgba(0,0,0,0.85)
+
+    );
+
+
+    z-index:-1;
+
+
+}
+
+
+
+
+.hero-bg {
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+    url("images/hero.jpg");
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    z-index:-2;
+
+
+    animation:
+
+    zoomEffect 15s infinite alternate;
+
+
+}
+
+
+
+@keyframes zoomEffect {
+
+
+    from {
+
+
+        transform:scale(1);
+
+
+    }
+
+
+    to {
+
+
+        transform:scale(1.1);
+
+
+    }
+
+
+}
+
+
+
+/* Hero Content */
+
+
+.hero-content {
+
+
+    max-width:900px;
+
+
+    padding:20px;
+
+
+}
+
+
+
+.hero-small {
+
+
+    color:var(--light-gold);
+
+
+    font-size:20px;
+
+
+    letter-spacing:5px;
+
+
+    text-transform:uppercase;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+.hero-title {
+
+
+    font-size:75px;
+
+
+    line-height:1.2;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.hero-title span {
+
+
+    color:var(--gold);
+
+
+}
+
+
+
+.hero-description {
+
+
+    max-width:650px;
+
+
+    margin:0 auto 40px;
+
+
+    color:#ddd;
+
+
+    font-size:18px;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+/* Hero Buttons */
+
+
+.hero-buttons {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+
+}
+
+
+
+.secondary-btn {
+
+
+    padding:14px 35px;
+
+
+    border-radius:50px;
+
+
+    border:1px solid var(--gold);
+
+
+    color:var(--gold);
+
+
+    transition:0.4s;
+
+
+}
+
+
+
+.secondary-btn:hover {
+
+
+    background:var(--gold);
+
+
+    color:#000;
+
+
+}
+
+
+
+/* =====================================
+   FLOATING HEART EFFECT
+===================================== */
+
+
+.heart {
+
+
+    position:absolute;
+
+
+    color:#ff6b9d;
+
+
+    font-size:25px;
+
+
+    animation:
+
+    floatingHeart 6s infinite ease-in-out;
+
+
+}
+
+
+
+@keyframes floatingHeart {
+
+
+    0%,100% {
+
+
+        transform:translateY(0);
+
+
+        opacity:.5;
+
+
+    }
+
+
+
+    50% {
+
+
+        transform:translateY(-40px);
+
+
+        opacity:1;
+
+
+    }
+
+
+}
+
+
+
+/* =====================================
+   COUNTDOWN SECTION
+===================================== */
+
+
+.countdown {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:25px;
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+.time-box {
+
+
+    width:110px;
+
+
+    height:110px;
+
+
+    border-radius:20px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    background:var(--glass);
+
+
+
+    border:1px solid var(--border);
+
+
+
+    backdrop-filter:blur(10px);
+
+
+
+}
+
+
+
+.time-box h3 {
+
+
+    font-size:35px;
+
+
+    color:var(--gold);
+
+
+}
+
+
+
+.time-box span {
+
+
+    font-size:13px;
+
+
+    color:#ccc;
+
+
+    text-transform:uppercase;
+
+
+}
+
+
+
+/* =====================================
+   RESPONSIVE TABLET
+===================================== */
+
+
+@media(max-width:900px){
+
+
+    .nav-links {
+
+
+        display:none;
+
+
+    }
+
+
+
+    .menu-btn {
+
+
+        display:block;
+
+
+    }
+
+
+
+    .hero-title {
+
+
+        font-size:50px;
+
+
+    }
+
+
+
+    .hero-description {
+
+
+        font-size:16px;
+
+
+    }
+
+
+}
+/* =====================================
+   STYLE CSS - PART 3
+   GALLERY + LOVE LETTER + TIMELINE
+===================================== */
+
+
+/* =====================================
+   MEMORY GALLERY
+===================================== */
+
+
+.gallery {
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3, 1fr);
+
+    gap:30px;
+
+}
+
+
+
+.photo-card {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    border-radius:25px;
+
+
+    height:420px;
+
+
+    border:1px solid var(--border);
+
+
+    background:var(--glass);
+
+
+    backdrop-filter:blur(10px);
+
+
+    transition:0.5s ease;
+
+
+}
+
+
+
+.photo-card img {
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    transition:0.6s ease;
+
+
+}
+
+
+
+.photo-card::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+    linear-gradient(
+
+    transparent,
+
+    rgba(0,0,0,0.8)
+
+    );
+
+
+}
+
+
+
+.photo-card:hover {
+
+
+    transform:translateY(-15px);
+
+
+    box-shadow:
+
+    0 25px 50px rgba(212,175,55,0.25);
+
+
+}
+
+
+
+.photo-card:hover img {
+
+
+    transform:scale(1.1);
+
+
+}
+
+
+
+
+.photo-caption {
+
+
+    position:absolute;
+
+
+    bottom:30px;
+
+
+    left:25px;
+
+
+    z-index:2;
+
+
+}
+
+
+
+.photo-caption h3 {
+
+
+    color:white;
+
+
+    font-size:24px;
+
+
+}
+
+
+
+.photo-caption p {
+
+
+    color:#ddd;
+
+
+    margin-top:8px;
+
+
+}
+
+
+
+
+
+/* =====================================
+   LOVE LETTER SECTION
+===================================== */
+
+
+.love-letter {
+
+
+    max-width:850px;
+
+
+    margin:auto;
+
+
+    padding:50px;
+
+
+    position:relative;
+
+
+}
+
+
+
+.love-letter::before {
+
+
+    content:"❤";
+
+
+    position:absolute;
+
+
+    top:-30px;
+
+
+    left:50%;
+
+
+    transform:translateX(-50%);
+
+
+    font-size:50px;
+
+
+    color:var(--gold);
+
+
+}
+
+
+
+.letter-text {
+
+
+    font-family:
+
+    var(--script-font);
+
+
+    font-size:38px;
+
+
+    line-height:1.8;
+
+
+    text-align:center;
+
+
+    color:var(--light-gold);
+
+
+}
+
+
+
+.signature {
+
+    margin-top:40px;
+
+    text-align:right;
+    /* =====================================
+   STYLE CSS - PART 4
+   MUSIC + FOOTER + FINAL POLISH
+===================================== */
+
+
+/* =====================================
+   MUSIC SECTION
+===================================== */
+
+
+.music-box {
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+
+.music-box h2 {
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+
+.music-box p {
+
+    color:#ccc;
+
+    margin-bottom:30px;
+
+}
+
+
+audio {
+
+    width:100%;
+
+    max-width:500px;
+
+    filter:
+
+    sepia(30%)
+
+    saturate(80%)
+
+    hue-rotate(10deg);
+
+}
+
+
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+
+footer {
+
+    padding:60px 0;
+
+    text-align:center;
+
+    border-top:
+
+    1px solid var(--border);
+
+    background:
+
+    rgba(0,0,0,0.4);
+
+}
+
+
+
+footer h2 {
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+footer p {
+
+    color:#aaa;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* =====================================
+   EXTRA GOLD EFFECT
+===================================== */
+
+
+.gold-line {
+
+    width:120px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:20px auto;
+
+}
+
+
+
+
+
+/* =====================================
+   SMOOTH CARD HOVER
+===================================== */
+
+
+.glass-card:hover {
+
+    transform:translateY(-8px);
+
+    border-color:var(--gold);
+
+    transition:0.4s ease;
+
+}
+
+
+
+
+
+/* =====================================
+   IMAGE LOADING EFFECT
+===================================== */
+
+
+.photo-card img {
+
+    opacity:0;
+
+    animation:imageShow 1.2s ease forwards;
+
+}
+
+
+
+@keyframes imageShow {
+
+
+    from {
+
+        opacity:0;
+
+        transform:scale(1.05);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+
+/* =====================================
+   MOBILE FINAL FIX
+===================================== */
+
+
+@media(max-width:600px){
+
+
+    .logo {
+
+        font-size:32px;
+
+    }
+
+
+    .hero-title {
+
+        font-size:40px;
+
+    }
+
+
+    .hero-small {
+
+        font-size:14px;
+
+        letter-spacing:3px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+    .countdown {
+
+        gap:10px;
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .time-box {
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+
+    .time-box h3 {
+
+        font-size:25px;
+
+    }
+
+
+    footer h2 {
+
+        font-size:40px;
+
+    }
+
+
+}
+.opening-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:1s ease;
+
+}
+
+
+.opening-content{
+
+    text-align:center;
+
+}
+
+
+.opening-content h1{
+
+    color:var(--gold);
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+}
+
+
+.opening-content p{
+
+    color:#ccc;
+
+    margin-bottom:30px;
+
+}
+/* =====================================
+   PREMIUM LOADER
+===================================== */
+
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10000;
+
+    transition:1s ease;
+
+}
+
+
+.loader-heart{
+
+    font-size:70px;
+
+    animation:pulse 1.2s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.3);
+
+    }
+
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+
+/* Cursor Glow */
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,0.5);
+
+    pointer-events:none;
+
+    display:none;
+
+}
+/* =====================================
+   SECRET MESSAGE
+===================================== */
+
+
+.secret-section{
+
+    text-align:center;
+
+}
+
+
+
+.secret-message{
+
+
+    max-width:700px;
+
+    margin:40px auto 0;
+
+
+    padding:40px;
+
+
+    display:none;
+
+
+    background:rgba(255,255,255,0.06);
+
+
+    border:1px solid var(--border);
+
+
+    border-radius:25px;
+
+
+    backdrop-filter:blur(15px);
+
+
+    animation:fadeUp 1s ease;
+
+
+}
+
+
+
+.secret-message h2{
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.secret-message p{
+
+    color:#ddd;
+
+    line-height:2;
+
+}
+/* =====================================
+   FINAL MOBILE POLISH
+===================================== */
+
+@media(max-width:480px){
+
+    .hero-title{
+
+        font-size:34px;
+
+    }
+
+
+    .hero-description{
+
+        font-size:14px;
+
+    }
+
+
+    .section-title h2{
+
+        font-size:32px;
+
+    }
+
+
+    .letter-text{
+
+        font-size:25px;
+
+    }
+
+
+    .signature{
+
+        font-size:35px;
+
+    }
+
+
+    .luxury-btn{
+
+        padding:12px 25px;
+
+        font-size:14px;
+
+    }
+
+
+    .opening-content h1{
+
+        font-size:35px;
+
+    }
+
+}
